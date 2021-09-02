@@ -30,7 +30,7 @@
 | condition_id       | integer   | null: false                    |
 | shipping-charge_id | integer   | null: false                    |
 | region_id          | integer   | null: false                    |
-| days_to_ship       | integer   | null: false                    |
+| days-to-ship_id       | integer   | null: false                    |
 | price              | integer   | null: false                    |
 | user               | references| null: false, foreign_key: true |
 

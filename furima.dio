@@ -45,16 +45,16 @@
                 <mxCell id="PVqDGqIh_cQyaRlKdATP-39" value="content (string NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
                     <mxGeometry y="86" width="300" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="PVqDGqIh_cQyaRlKdATP-36" value="condition (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
+                <mxCell id="PVqDGqIh_cQyaRlKdATP-36" value="condition_id (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
                     <mxGeometry y="120" width="300" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="PVqDGqIh_cQyaRlKdATP-44" value="shipping-charge (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
+                <mxCell id="PVqDGqIh_cQyaRlKdATP-44" value="shipping-charge_id (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
                     <mxGeometry y="140" width="300" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="PVqDGqIh_cQyaRlKdATP-45" value="region (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
+                <mxCell id="PVqDGqIh_cQyaRlKdATP-45" value="region_id (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
                     <mxGeometry y="160" width="300" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="PVqDGqIh_cQyaRlKdATP-46" value="date (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
+                <mxCell id="PVqDGqIh_cQyaRlKdATP-46" value="days-to-ship_id (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
                     <mxGeometry y="180" width="300" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="PVqDGqIh_cQyaRlKdATP-47" value="price (integer NOT NULL)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="PVqDGqIh_cQyaRlKdATP-37" vertex="1">
@@ -87,7 +87,7 @@
                 <mxCell id="PVqDGqIh_cQyaRlKdATP-62" value=" house_number (string NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="PVqDGqIh_cQyaRlKdATP-57" vertex="1">
                     <mxGeometry y="116" width="245" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="PVqDGqIh_cQyaRlKdATP-63" value=" building_name (string NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="PVqDGqIh_cQyaRlKdATP-57" vertex="1">
+                <mxCell id="PVqDGqIh_cQyaRlKdATP-63" value=" building_name (string )" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="PVqDGqIh_cQyaRlKdATP-57" vertex="1">
                     <mxGeometry y="146" width="245" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="PVqDGqIh_cQyaRlKdATP-64" value=" telephone_number (string NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="PVqDGqIh_cQyaRlKdATP-57" vertex="1">
