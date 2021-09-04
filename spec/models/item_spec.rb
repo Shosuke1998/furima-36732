@@ -11,7 +11,7 @@ RSpec.describe Item, type: :model do
         expect(@item).to be_valid
       end
     end
-    
+
     context '商品出品できない時' do
       it 'imageは必須' do
         @item.image = nil
@@ -61,15 +61,13 @@ RSpec.describe Item, type: :model do
       it '価格は300~9999999までの範囲' do
         @item.price = 299
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is invalid")
+        expect(@item.errors.full_messages).to include('Price is invalid')
       end
       it '価格は半角数値' do
         @item.price = '３３３３'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is invalid")
+        expect(@item.errors.full_messages).to include('Price is invalid')
       end
-      
     end
   end
-  
 end
