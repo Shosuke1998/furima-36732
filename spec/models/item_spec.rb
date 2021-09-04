@@ -28,28 +28,28 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Content can't be blank")
       end
-      it 'category_idがなければ出品できない' do
-        @item.category_id = ''
+      it 'category_idが1だと出品できない' do
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
-      it 'condition_idがなければ出品できない' do
-        @item.condition_id = ''
+      it 'condition_idが1だと出品できない' do
+        @item.condition_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Condition can't be blank")
       end
-      it 'shipping_charge_idがなければ出品できない' do
-        @item.shipping_charge_id = ''
+      it 'shipping_charge_idが1だと出品できない' do
+        @item.shipping_charge_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping charge can't be blank")
       end
-      it 'region_idがなければ出品できない' do
-        @item.region_id = ''
+      it 'region_idが1だと出品できない' do
+        @item.region_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Region can't be blank")
       end
-      it 'days_to_ship_idがなければ出品できない' do
-        @item.days_to_ship_id = ''
+      it 'days_to_ship_idが1だと出品できない' do
+        @item.days_to_ship_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Days to ship can't be blank")
       end
@@ -58,8 +58,13 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
-      it '価格は300~9999999までの範囲' do
+      it '価格が300円より少ない時' do
         @item.price = 299
+        @item.valid?
+        expect(@item.errors.full_messages).to include('Price is invalid')
+      end
+      it '価格が9999999円より少ない時' do
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is invalid')
       end
@@ -67,6 +72,11 @@ RSpec.describe Item, type: :model do
         @item.price = '３３３３'
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is invalid')
+      end
+      it 'userが紐づいていないとき' do 
+        @item.user = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("User must exist")
       end
     end
   end
