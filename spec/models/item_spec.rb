@@ -64,7 +64,7 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include('Price is invalid')
       end
       it '価格が9999999円より少ない時' do
-        @item.price = 10000000
+        @item.price = 10_000_000
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is invalid')
       end
@@ -73,10 +73,10 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is invalid')
       end
-      it 'userが紐づいていないとき' do 
+      it 'userが紐づいていないとき' do
         @item.user = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("User must exist")
+        expect(@item.errors.full_messages).to include('User must exist')
       end
     end
   end
