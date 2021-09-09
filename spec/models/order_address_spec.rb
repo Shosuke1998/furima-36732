@@ -4,7 +4,7 @@ RSpec.describe OrderAddress, type: :model do
   before do
     user = FactoryBot.create(:user)
     item = FactoryBot.create(:item)
-    @order_address = FactoryBot.build(:order_address, user_id:user.id, item_id:item.id)
+    @order_address = FactoryBot.build(:order_address, user_id: user.id, item_id: item.id)
     sleep 0.1
   end
 
@@ -19,7 +19,7 @@ RSpec.describe OrderAddress, type: :model do
   end
 
   context '内容に問題がある場合' do
-    it "tokenが空では登録できないこと" do
+    it 'tokenが空では登録できないこと' do
       @order_address.token = nil
       @order_address.valid?
       expect(@order_address.errors.full_messages).to include("Token can't be blank")
@@ -32,7 +32,7 @@ RSpec.describe OrderAddress, type: :model do
     it '郵便番号はハイフンなしでは保存できない' do
       @order_address.postal_code = '1234567'
       @order_address.valid?
-      expect(@order_address.errors.full_messages).to include("Postal code is invalid. Include hyphen(-)")
+      expect(@order_address.errors.full_messages).to include('Postal code is invalid. Include hyphen(-)')
     end
     it '都道府県が空では保存できない' do
       @order_address.region_id = 1
@@ -57,7 +57,7 @@ RSpec.describe OrderAddress, type: :model do
     it '電話番号は、10桁以上11桁以内の半角数値のみ保存可能なこと' do
       @order_address.telephone_number = '090-1234-5678'
       @order_address.valid?
-      expect(@order_address.errors.full_messages).to include("Telephone number is invalid")
+      expect(@order_address.errors.full_messages).to include('Telephone number is invalid')
     end
     it 'userと紐づいていないと保存できない' do
       @order_address.user_id = nil
@@ -72,15 +72,12 @@ RSpec.describe OrderAddress, type: :model do
     it '電話番号は9桁以下だと保存できない' do
       @order_address.telephone_number = '111111111'
       @order_address.valid?
-      expect(@order_address.errors.full_messages).to include("Telephone number is invalid")
+      expect(@order_address.errors.full_messages).to include('Telephone number is invalid')
     end
     it '電話番号は12桁以上だと保存できない' do
       @order_address.telephone_number = '111111111111'
       @order_address.valid?
-      expect(@order_address.errors.full_messages).to include("Telephone number is invalid")
+      expect(@order_address.errors.full_messages).to include('Telephone number is invalid')
     end
   end
-
-
-
 end
