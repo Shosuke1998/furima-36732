@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     if current_user.id == @item.user.id
       redirect_to root_path
     end
-    if @item.user.id != current_user.id && @item.order.present?
+    if @item.user.id == current_user.id || @item.order.present?
       redirect_to root_path
     end
   end
