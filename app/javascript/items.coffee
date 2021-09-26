@@ -1,4 +1,4 @@
-function post (){
+onPageLoad 'items', ->
   const itemPrice = document.getElementById("item-price");
   const addTaxPrice = document.getElementById("add-tax-price");
   const profit = document.getElementById("profit");
@@ -10,4 +10,4 @@ function post (){
   })
  };
  
- window.addEventListener('load', post);
+ 

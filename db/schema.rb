@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2021_09_07_020846) do
     t.string "building_name"
     t.string "telephone_number", null: false
     t.bigint "order_id", null: false
+    t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_addresses_on_order_id"
